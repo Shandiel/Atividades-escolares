@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atividades Escolares</title>
+
+  <!-- Fontes e ícones -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+ 
+</head>
+
+<body>
+
+  <header>
+    <h1>Materiais Psicopedagógicos, Lúdicos e Educativos.</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Botão carrinho fixo -->
+  <div id="carrinho-btn" onclick="toggleCarrinho()">
+    <i class="fas fa-shopping-cart"></i> Carrinho
+    <span id="contador">0</span>
+  </div>
+
+  <!-- Painel do carrinho -->
+  <div id="painelCarrinho">
+    <h3>🛒 Seu Carrinho</h3>
+    <ul id="listaCarrinho"></ul>
+    <button id="finalizar" onclick="enviarParaWhatsApp()">Finalizar no WhatsApp</button>
+  </div>
+
+  <main>
+    <div id="container">
+      <!-- Produtos -->
+      <div class="produto">
+        <img src="imagens/alfabeto.jpg" alt="Alfabeto">
+        <h3>Alfabeto</h3>
+        <p>Atividades de reconhecimento, escrita e associação de letras do alfabeto para crianças do primário.</p>
+        <span class="preco">R$ 19,90</span>
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades do Alfabeto')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/vogais.jpg" alt="Letras">
+        <h3>Atividades de Vogais</h3>
+        <p>Exercícios de identificação, traçado e completação de palavras usando as vogais A, E, I, O, U.</p>
+        <span class="preco">R$ 19,90</span>
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Vogais')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/lateralidade.jpg" alt="Atividades de lateralidade">
+        <h3>Atividades de Lateralidade</h3>
+        <p>Tarefas para desenvolver a noção espacial de esquerda e direita com elementos visuais.</p>
+        <span class="preco">R$ 19,90</span>
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Lateralidade')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="/imagens/atividades de cordenação motora.jpg" alt="Português">
+        <h3>Atividades de Cordenação Motora</h3>
+        <p> Práticas de pintura, traçado e sopro para aprimorar a coordenação motora fina das crianças.</p>
+        <span class="preco">R$ 19,90</span>
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Cordenação Motora')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/esquerda ou direita.jpg" alt="Português">
+        <h3>Atividades de Esquerda ou Direita</h3>
+        <p> Exercícios de contagem e identificação de objetos posicionados à esquerda ou direita na página.</p>
+        <span class="preco">R$ 19,90</span>
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Esquerda ou Direita')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/matematica.jpg" alt="Matemática">
+        <h3>Atividades de Matemática</h3>
+        <p> Introdução aos números, contagem, quantidades e escrita numérica através de atividades lúdicas.</p>
+        <span class="preco">R$ 19,90</span>
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Matemática')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/sequencia logica.jpg" alt="Português">
+        <h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/pontilhado.jpg" alt="Português">
+        <h3>Atividades Pontilhado.</h3>
+        <p>Prática de caligrafia e controle do lápis com exercícios de traçado sobre linhas pontilhadas.</p>
+        <span class="preco">R$ 19,90</span>
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Pontilhado')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/em breve.png" alt="Português">
+        <!--<h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>-->
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/em breve.png" alt="Português">
+        <!--<h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>-->
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/em breve.png" alt="Português">
+        <!--<h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>-->
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/em breve.png" alt="Português">
+        <!--<h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>-->
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+      <div class="produto">
+        <img src="imagens/em breve.png" alt="Português">
+        <!--<h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>-->
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/em breve.png" alt="Português">
+        <!--<h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>-->
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/em breve.png" alt="Português">
+        <!--<h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>-->
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/em breve.png" alt="Português">
+        <!--<h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>-->
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/em breve.png" alt="Português">
+        <!--<h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>-->
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/em breve.png" alt="Português">
+        <!--<h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>-->
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/em breve.png" alt="Português">
+        <!--<h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>-->
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+
+      <div class="produto">
+        <img src="imagens/em breve.png" alt="Português">
+        <!--<h3>Percepção Visual Sequência Lógica.</h3>
+        <p>Identificação de padrões e sequências para desenvolver o raciocínio lógico e percepção visual.</p>
+        <span class="preco">R$ 19,90</span>-->
+        <br>
+        <button class="btn" onclick="adicionarAoCarrinho('Atividades de Português')">Adicionar ao carrinho</button>
+      </div>
+    </div>
+
+    <hr>
+    <!--Sobre  -->
+     <section id="sobre">
+      <h2>Conheça um pouco sobre nós</h2>
+      <p>
+       Nossa empresa é especializada na criação e distribuição de materiais psicopedagógicos, lúdicos e educativos, desenvolvidos para estimular o aprendizado, a atenção, o raciocínio e o desenvolvimento global de crianças.
+       Com base em fundamentos da Neuropsicopedagogia, Psicologia e Educação, oferecemos recursos que auxiliam profissionais e famílias no processo de intervenção, estimulação cognitiva e fortalecimento das habilidades escolares.
+        <br>
+       Trabalhamos com jogos, atividades e kits personalizados que promovem aprendizagens significativas, respeitando o ritmo e as particularidades de cada criança.
+       Nosso compromisso é tornar o processo de ensino e terapia mais leve, criativo e eficiente, contribuindo para o desenvolvimento pleno e prazeroso do aprender.
+        <br>
+       ✨ Missão: Transformar o aprendizado em uma experiência divertida e significativa. <br>
+       🎯 Visão: Ser referência nacional em materiais psicopedagógicos de qualidade e inovação. <br>
+       💡 Valores: Empatia, inclusão, criatividade e compromisso com o desenvolvimento infantil. <br>
+      </p>
+    </section>
+
+
+    <!-- Carrinho -->
+    <!--<section id="carrinho">
+      <h2>🛒 Seu Carrinho</h2>
+      <ul id="listaCarrinho"></ul>
+      <button class="btn" onclick="enviarParaWhatsApp()">Finalizar Compra no WhatsApp</button>
+    </section>-->
+
+    <!-- Botão flutuante -->
+    <a href="https://wa.me/5563992227437?text=Olá! Quero saber mais sobre as atividades escolares." class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </main>
+
+  <footer id="contato">
+    <div class="emoji">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="https://wa.me/5563992227437" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; Shandiel Andrade — Todos os direitos reservados.</p>
+  </footer>
+ <script src="index.js"></script>
+</body>
+</html>
